@@ -19,7 +19,7 @@
     "require": {
         "php": "^8.2",
         "ext-json": "*",
-        "mrugeshtatvasoft/laravel-datatables-oracle": "^11.0"
+        "mrugeshtatvasoft/laravel-datatables-oracle": "^1.0"
     },
     "require-dev": {
         "larastan/larastan": "^2.9.1",
