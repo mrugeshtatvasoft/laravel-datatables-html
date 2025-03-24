@@ -6,9 +6,9 @@ use Closure;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Query\Builder as QueryBuilder;
-use Illuminate\Support\Fluent;
 use Illuminate\Support\Str;
 use Illuminate\Support\Traits\Macroable;
+use mrugeshtatvasoft\DataTables\Html\Fluent;
 use mrugeshtatvasoft\DataTables\Html\HasAuthorizations;
 
 /**
@@ -372,6 +372,18 @@ class Field extends Fluent
     public function nullDefault(bool $value = true): static
     {
         $this->attributes['nullDefault'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @return $this
+     *
+     * @see https://editor.datatables.net/reference/option/fields.className
+     */
+    public function className(string $className): static
+    {
+        $this->attributes['className'] = $className;
 
         return $this;
     }

@@ -2,12 +2,14 @@
 
 namespace mrugeshtatvasoft\DataTables\Html;
 
+use Closure;
 use Illuminate\Contracts\Support\Arrayable;
-use Illuminate\Support\Fluent;
+use Illuminate\Support\Traits\Macroable;
 
 class Button extends Fluent implements Arrayable
 {
     use HasAuthorizations;
+    use Macroable;
 
     /**
      * Make a new button instance.
@@ -269,9 +271,11 @@ class Button extends Fluent implements Arrayable
     {
         if (! isset($this->attributes['className'])) {
             $this->attributes['className'] = $class;
-        } else {
-            $this->attributes['className'] .= " $class";
+
+            return $this;
         }
+
+        $this->attributes['className'] = $this->attributes['className']." $class";
 
         return $this;
     }
@@ -424,6 +428,34 @@ class Button extends Fluent implements Arrayable
     public function align(string $align = 'button-left'): static
     {
         $this->attributes['align'] = $align;
+
+        return $this;
+    }
+
+    /**
+     * Handle dynamic calls to the fluent instance or macroable methods.
+     *
+     * @param  string  $method
+     * @param  array  $parameters
+     * @return mixed
+     *
+     * @throws \BadMethodCallException
+     */
+    public function __call($method, $parameters)
+    {
+        // Check if the method is a macro (Macroable functionality).
+        if (static::hasMacro($method)) {
+            $macro = static::$macros[$method];
+
+            if ($macro instanceof Closure) {
+                $macro = $macro->bindTo($this, static::class);
+            }
+
+            return $macro(...$parameters);
+        }
+
+        // Fallback to Fluent behavior if it's not a macro.
+        $this->attributes[$method] = count($parameters) > 0 ? reset($parameters) : true;
 
         return $this;
     }

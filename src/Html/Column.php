@@ -3,7 +3,6 @@
 namespace mrugeshtatvasoft\DataTables\Html;
 
 use Illuminate\Support\Arr;
-use Illuminate\Support\Fluent;
 use Illuminate\Support\Str;
 use mrugeshtatvasoft\DataTables\Html\Options\Plugins\SearchPanes;
 
@@ -29,6 +28,7 @@ use mrugeshtatvasoft\DataTables\Html\Options\Plugins\SearchPanes;
  * @property string $contentPadding
  * @property string $createdCell
  * @property string $exportFormat
+ * @property callable $exportRender
  *
  * @see https://datatables.net/reference/option/#columns
  */
@@ -302,7 +302,7 @@ class Column extends Fluent
      * @see https://datatables.net/reference/option/columns.data
      * @see https://datatables.net/manual/data/orthogonal-data
      */
-    public function data($value): static
+    public function data(array|string $value): static
     {
         $this->attributes['data'] = $value;
 
@@ -503,7 +503,7 @@ class Column extends Fluent
             return $value($parameters);
         } elseif ($this->isBuiltInRenderFunction($value)) {
             return $value;
-        } elseif (strlen((string) $value) < 256 && $view->exists($value)) {
+        } elseif (is_string($value) && strlen($value) < 256 && $view->exists($value)) {
             return $view->make($value)->with($parameters)->render();
         }
 

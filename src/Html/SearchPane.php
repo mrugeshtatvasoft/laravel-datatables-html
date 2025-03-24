@@ -5,7 +5,6 @@ namespace mrugeshtatvasoft\DataTables\Html;
 use Closure;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
-use Illuminate\Support\Fluent;
 use mrugeshtatvasoft\DataTables\Html\Editor\Fields\Options;
 
 class SearchPane extends Fluent
