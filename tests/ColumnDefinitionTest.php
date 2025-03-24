@@ -2,8 +2,8 @@
 
 namespace mrugeshtatvasoft\DataTables\Html\Tests;
 
-use PHPUnit\Framework\Attributes\Test;
 use mrugeshtatvasoft\DataTables\Html\ColumnDefinition;
+use PHPUnit\Framework\Attributes\Test;
 
 class ColumnDefinitionTest extends TestCase
 {

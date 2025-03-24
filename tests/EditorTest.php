@@ -2,9 +2,9 @@
 
 namespace mrugeshtatvasoft\DataTables\Html\Tests;
 
-use PHPUnit\Framework\Attributes\Test;
 use mrugeshtatvasoft\DataTables\Html\Editor\Editor;
 use mrugeshtatvasoft\DataTables\Html\Editor\Fields\Text;
+use PHPUnit\Framework\Attributes\Test;
 
 class EditorTest extends TestCase
 {

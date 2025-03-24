@@ -3,9 +3,9 @@
 namespace mrugeshtatvasoft\DataTables\Html\Tests;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use PHPUnit\Framework\Attributes\Test;
 use mrugeshtatvasoft\DataTables\Html\SearchPane;
 use mrugeshtatvasoft\DataTables\Html\Tests\Models\User;
+use PHPUnit\Framework\Attributes\Test;
 
 class SearchPaneTest extends TestCase
 {

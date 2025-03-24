@@ -10,8 +10,8 @@ use Illuminate\Support\Traits\Macroable;
 use Illuminate\View\Component;
 use InvalidArgumentException;
 use Livewire\Livewire;
-use Throwable;
 use mrugeshtatvasoft\DataTables\Html\Enums\LayoutPosition;
+use Throwable;
 
 class Layout extends Fluent
 {

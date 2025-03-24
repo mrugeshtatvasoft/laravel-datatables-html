@@ -2,9 +2,9 @@
 
 namespace mrugeshtatvasoft\DataTables\Html\Tests;
 
-use PHPUnit\Framework\Attributes\Test;
 use mrugeshtatvasoft\DataTables\Html\Editor\Fields;
 use mrugeshtatvasoft\DataTables\Html\Tests\Models\User;
+use PHPUnit\Framework\Attributes\Test;
 
 class FieldTest extends TestCase
 {

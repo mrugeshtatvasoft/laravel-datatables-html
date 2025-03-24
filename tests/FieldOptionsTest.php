@@ -4,9 +4,9 @@ namespace mrugeshtatvasoft\DataTables\Html\Tests;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\DB;
-use PHPUnit\Framework\Attributes\Test;
 use mrugeshtatvasoft\DataTables\Html\Editor\Fields\Options;
 use mrugeshtatvasoft\DataTables\Html\Tests\Models\User;
+use PHPUnit\Framework\Attributes\Test;
 
 class FieldOptionsTest extends TestCase
 {

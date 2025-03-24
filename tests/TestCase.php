@@ -6,12 +6,12 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
 use Livewire\LivewireServiceProvider;
-use Orchestra\Testbench\TestCase as BaseTestCase;
 use mrugeshtatvasoft\DataTables\DataTablesServiceProvider;
 use mrugeshtatvasoft\DataTables\Html\Builder;
 use mrugeshtatvasoft\DataTables\Html\Tests\Models\Role;
 use mrugeshtatvasoft\DataTables\Html\Tests\Models\User;
 use mrugeshtatvasoft\DataTables\HtmlServiceProvider;
+use Orchestra\Testbench\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase
 {

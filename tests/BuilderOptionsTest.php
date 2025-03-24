@@ -2,9 +2,9 @@
 
 namespace mrugeshtatvasoft\DataTables\Html\Tests;
 
-use PHPUnit\Framework\Attributes\Test;
 use mrugeshtatvasoft\DataTables\Html\Builder;
 use mrugeshtatvasoft\DataTables\Html\Column;
+use PHPUnit\Framework\Attributes\Test;
 
 class BuilderOptionsTest extends TestCase
 {

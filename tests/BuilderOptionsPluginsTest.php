@@ -2,10 +2,10 @@
 
 namespace mrugeshtatvasoft\DataTables\Html\Tests;
 
-use PHPUnit\Framework\Attributes\Test;
 use mrugeshtatvasoft\DataTables\Html\Builder;
 use mrugeshtatvasoft\DataTables\Html\Button;
 use mrugeshtatvasoft\DataTables\Html\SearchPane;
+use PHPUnit\Framework\Attributes\Test;
 
 class BuilderOptionsPluginsTest extends TestCase
 {

@@ -3,12 +3,12 @@
 namespace mrugeshtatvasoft\DataTables\Html\Tests;
 
 use Illuminate\Support\HtmlString;
-use PHPUnit\Framework\Attributes\Test;
 use mrugeshtatvasoft\DataTables\Html\Builder;
 use mrugeshtatvasoft\DataTables\Html\Column;
 use mrugeshtatvasoft\DataTables\Html\ColumnDefinition;
 use mrugeshtatvasoft\DataTables\Html\ColumnDefinitions;
 use mrugeshtatvasoft\DataTables\Html\Editor\Editor;
+use PHPUnit\Framework\Attributes\Test;
 
 class BuilderTest extends TestCase
 {
